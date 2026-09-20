@@ -1,10 +1,18 @@
-export default function MovieCard() {
+import type { Movie } from '../types/movie';
+
+interface MovieCardProps {
+  movie: Movie;
+}
+
+export default function MovieCard({ movie }: MovieCardProps) {
   return (
-    <>
-      <img src="/images/posters/1.jpg" alt="영화 포스터 이미지" />
-      <button>책갈피</button>
-      <h3>영화 제목</h3>
-      <p>날짜</p>
-    </>
+    <article>
+      <img src={movie.posterPath} alt={`${movie.title} 포스터`} />
+      <button type="button">
+        {movie.isBookmarked ? '북마크 취소' : '북마크'}
+      </button>
+      <h3>{movie.title}</h3>
+      <p>{movie.releaseDate}</p>
+    </article>
   );
 }
