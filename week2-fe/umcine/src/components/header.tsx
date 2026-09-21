@@ -3,18 +3,28 @@ import searchIcon from "/icons/search.svg";
 
 export default function Header() {
   return (
-    <>
-      <button>
-        <img src={umcineImg} alt="로고 이미지" />
-        <h3>UMCine</h3>
-      </button>
-      <button>영화</button>
-      <button>검색</button>
-      <button>내 정보</button>
-      <button>
-        <img src={searchIcon} alt="검색 아이콘" />
-      </button>
-      <button>로그인</button>
-    </>
+    <header className="header">
+      <div className="header-container">
+        <div className="header-left">
+          <button type="button" className="logo-btn">
+            <div className="logo-img-container">
+              <img src={umcineImg} alt="로고 이미지" className="logo-img" />
+            </div>
+            <h3 className="logo-title">UMCine</h3>
+          </button>
+          <nav className="nav-menu">
+            <button type="button" className="nav-item">영화</button>
+            <button type="button" className="nav-item">검색</button>
+            <button type="button" className="nav-item">내 정보</button>
+          </nav>
+        </div>
+        <div className="header-right">
+          <button type="button" className="icon-btn" aria-label="검색">
+            <img src={searchIcon} alt="검색 아이콘" />
+          </button>
+          <button type="button" className="login-btn">로그인</button>
+        </div>
+      </div>
+    </header>
   );
 }

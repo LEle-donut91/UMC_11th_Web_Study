@@ -10,9 +10,10 @@ export default function Pagination({
   onPageChange,
 }: PaginationProps) {
   return (
-    <nav>
+    <nav className="pagination">
       <button
         type="button"
+        className="pagination-btn"
         disabled={currentPage === 1}
         onClick={() => onPageChange(currentPage - 1)}
       >
@@ -23,6 +24,7 @@ export default function Pagination({
         <button
           key={page}
           type="button"
+          className={`pagination-number ${currentPage === page ? 'active' : ''}`}
           onClick={() => onPageChange(page)}
         >
           {page}
@@ -31,6 +33,7 @@ export default function Pagination({
 
       <button
         type="button"
+        className="pagination-btn"
         disabled={currentPage === totalPages}
         onClick={() => onPageChange(currentPage + 1)}
       >

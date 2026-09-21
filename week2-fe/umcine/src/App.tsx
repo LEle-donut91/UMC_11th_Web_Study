@@ -24,9 +24,9 @@ export default function App() {
   const currentMovies = movies.slice(startIndex, startIndex + 10);
 
   return (
-    <>
+    <div className="app-container">
       <Header />
-      <main>
+      <main className="main-content">
         <MovieGrid movies={currentMovies} onToggleBookmark={handleToggleBookmark} />
         {totalPages > 0 && (
           <Pagination
@@ -37,6 +37,6 @@ export default function App() {
         )}
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

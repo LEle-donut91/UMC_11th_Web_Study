@@ -8,9 +8,9 @@ interface MovieGridProps {
 
 export default function MovieGrid({ movies, onToggleBookmark }: MovieGridProps) {
   return (
-    <section>
-      <h1>영화 목록</h1>
-      <div>
+    <section className="movie-grid-section">
+      <h1 className="section-title">영화 목록</h1>
+      <div className="movie-grid">
         {movies.map((movie) => (
           <MovieCard key={movie.id} movie={movie} onToggleBookmark={onToggleBookmark}/>
         ))}
