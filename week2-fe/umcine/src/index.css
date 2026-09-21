@@ -19,6 +19,7 @@ button {
   font-size: inherit;
 }
 
+/* App.tsx */
 .app-container {
   display: flex;
   flex-direction: column;
@@ -33,7 +34,7 @@ button {
   padding: 32px 24px 60px;
 }
 
-/* Header */
+/* header.tsx */
 .header {
   width: 100%;
   background-color: #ffffff;
@@ -138,7 +139,7 @@ button {
   background-color: #1d4ed8;
 }
 
-/* Movie Grid Section */
+/* movie-grid.tsx */
 .movie-grid-section {
   width: 100%;
 }
@@ -156,19 +157,7 @@ button {
   gap: 20px;
 }
 
-@media (max-width: 1024px) {
-  .movie-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 640px) {
-  .movie-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Movie Card */
+/* movie-card.tsx */
 .movie-card {
   display: flex;
   flex-direction: column;
@@ -235,7 +224,7 @@ button {
   color: #888888;
 }
 
-/* Pagination */
+/* pagination.tsx */
 .pagination {
   display: flex;
   justify-content: center;
@@ -275,7 +264,7 @@ button {
   font-weight: 600;
 }
 
-/* Footer */
+/* footer.tsx */
 .footer {
   width: 100%;
   background-color: #ffffff;

@@ -1,6 +1,4 @@
-import umcineImg from "/icons/movie.svg";
-import searchIcon from "/icons/search.svg";
-
+// 상단 Header 컴포넌트
 export default function Header() {
   return (
     <header className="header">
@@ -8,7 +6,7 @@ export default function Header() {
         <div className="header-left">
           <button type="button" className="logo-btn">
             <div className="logo-img-container">
-              <img src={umcineImg} alt="로고 이미지" className="logo-img" />
+              <img src="/icons/movie.svg" alt="로고 이미지" className="logo-img" />
             </div>
             <h3 className="logo-title">UMCine</h3>
           </button>
@@ -20,7 +18,7 @@ export default function Header() {
         </div>
         <div className="header-right">
           <button type="button" className="icon-btn" aria-label="검색">
-            <img src={searchIcon} alt="검색 아이콘" />
+            <img src="/icons/search.svg" alt="검색 아이콘" />
           </button>
           <button type="button" className="login-btn">로그인</button>
         </div>
