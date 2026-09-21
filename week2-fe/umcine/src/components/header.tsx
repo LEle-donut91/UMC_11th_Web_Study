@@ -1,11 +1,12 @@
-import logoImg from "/images/logos/tmdb-logo.svg";
+import umcineImg from "/icons/movie.svg";
 import searchIcon from "/icons/search.svg";
 
 export default function Header() {
   return (
     <>
       <button>
-        <img src={logoImg} alt="로고 이미지" />
+        <img src={umcineImg} alt="로고 이미지" />
+        <h3>UMCine</h3>
       </button>
       <button>영화</button>
       <button>검색</button>
